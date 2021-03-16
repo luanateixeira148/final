@@ -1,10 +1,11 @@
 import './App.scss';
-import Button from './comps/Button'
+import Button from './comps/Button';
+import Input from './comps/Input';
 
 function App() {
   return (
     <div className="App">
-      <Button />
+      <Input />
     </div>
   );
 }

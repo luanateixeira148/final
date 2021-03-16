@@ -13,7 +13,6 @@ const ButtonContainer = styled.button`
     max-width:${props=>props.width ? props.width : "230px"};
 `;
 
-//must at least have these props
 const Button = ({onClick, text}) => {
   return <ButtonContainer onClick={onClick}>
       {text}
