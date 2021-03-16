@@ -14,6 +14,7 @@ const Label = styled.div`
     font-size: 16px;
     color: #6B6B6B;
     text-align: left;
+    margin-bottom: 5px;
 `;
 
 const InputBox = styled.input`
@@ -21,21 +22,19 @@ const InputBox = styled.input`
     border: 1px solid #C1C1C1;
     box-sizing: border-box;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    border: none;
     border-radius: 6px;
     min-height: 45px;
     min-width: 290px;
 `;
 
-const Input = ({onChange, placeholder, label}) => {
+const Input = ({placeholder, label}) => {
   return <InputContainer>
     <Label>{label}</Label>
-    <InputBox placeholder={placeholder} />
+    <InputBox />
   </InputContainer>
 }
 
 Input.defaultProps = {
-placeholder:"Input",
 label:"Label"
 }
 
