@@ -1,9 +1,10 @@
 import './App.scss';
+import Button from './comps/Button'
 
 function App() {
   return (
     <div className="App">
-      TEST
+      <Button />
     </div>
   );
 }
