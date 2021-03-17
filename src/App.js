@@ -1,9 +1,11 @@
 import './App.scss';
+import Emma from './pages/emma';
 
 function App() {
   return (
     <div className="App">
-      APP
+      
+      {/* <Emma></Emma> */}
     </div>
   );
 }
