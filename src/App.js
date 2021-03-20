@@ -1,21 +1,12 @@
 import './App.scss';
 
-import Button from './comps/Button';
-import Input from './comps/Input';
-import LoginCard from './comps/LoginCard';
-import LoginHeader from './comps/LoginHeader';
-
-import Emma from './pages/emma';
+import Post from './pages/Post';
 
 
 function App() {
   return (
     <div className="App">
-
-      <LoginCard />
-      
-      {/* <Emma></Emma> */}
-
+      <Post></Post>
     </div>
   );
 }

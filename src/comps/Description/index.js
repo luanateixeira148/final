@@ -17,26 +17,26 @@ const Label = styled.div`
     margin-bottom: 5px;
 `;
 
-const InputBox = styled.input`
+const InputBox = styled.textarea`
     background: #FFFFFF;
     border: 1px solid #C1C1C1;
     box-sizing: border-box;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
-    min-height: 45px;
+    height: 161px;
     max-width: 290px;
-    
+    resize: none;
 `;
 
-const Input = ({placeholder, label}) => {
+const Description = ({placeholder, label}) => {
   return <InputContainer>
     <Label>{label}</Label>
     <InputBox />
   </InputContainer>
 }
 
-Input.defaultProps = {
+Description.defaultProps = {
 label:"Label"
 }
 
-export default Input;
+export default Description;

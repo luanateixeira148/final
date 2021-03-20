@@ -31,9 +31,9 @@ const Text = styled.div`
 
 
 
-const UploadImage = () => {
+const UploadImage = ({onClick}) => {
     return <Container>
-        <Button>
+        <Button onClick={onClick}>
         <img src={Plus}/>
         </Button>
 
@@ -42,6 +42,8 @@ const UploadImage = () => {
     </Container>
 }
 
-
+UploadImage.defaultProps = {
+    onClick: () => { }
+  }
 
 export default UploadImage; 

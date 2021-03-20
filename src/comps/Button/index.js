@@ -10,6 +10,7 @@ const ButtonContainer = styled.button`
   border: none;
   color: #FFFFFF;
   margin: 35px;
+  font-size: 18px;
 `;
 
 const Button = ({onClick, text}) => {

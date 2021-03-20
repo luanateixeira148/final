@@ -7,10 +7,10 @@ const Container = styled.div`
     width: 375px;
     height: 65px;
     background-color: white;
-    box-shadow: 0px 2px 10px 0px #727272;
+    box-shadow: 0 7px 10px -4px #D6D6D6;
     align-items: center;
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: space-around;
     
 `;
 
@@ -23,19 +23,22 @@ const Text = styled.div`
     color: #3D3D3D;
     font-size: 26px; 
     line-height: 33px;
-    padding: 0px 110px 0px 110px; 
+    padding-top: 14px;
     
 `;
 
 const Button = styled.div`
 line-height: 10px;
+position: absolute;
+left: 20px;
+top: 18px;
 
 `;
 
 
-const HeaderBack = ({text}) => {
+const HeaderBack = ({text, onClick}) => {
     return <Container>
-        <Button>
+        <Button onClick={onClick}>
         <img src={back}></img>
         </Button>
         <Text>{text}</Text>
@@ -47,6 +50,8 @@ const HeaderBack = ({text}) => {
 
 HeaderBack.defaultProps = {
     text: "Default", 
+    onClick: () => { },
+
 }
 
 
