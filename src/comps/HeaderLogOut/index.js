@@ -7,7 +7,7 @@ const Container = styled.div`
     width: 375px;
     height: 65px;
     background-color: white;
-    box-shadow: 0px 2px 10px 0px #727272;
+    box-shadow: 0 7px 10px -4px #D6D6D6;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -33,11 +33,11 @@ line-height: 10px;
 `;
 
 
-const HeaderLogout = ({text}) => {
+const HeaderLogout = ({text, onClick}) => {
     return <Container>
         <Extra></Extra>
         <Text>{text}</Text>
-        <Button>
+        <Button onClick={onClick}>
         <img src={logout}></img>
         </Button>
     
@@ -46,6 +46,7 @@ const HeaderLogout = ({text}) => {
 
 HeaderLogout.defaultProps = {
     text: "Default", 
+    onClick: () => { },
 }
 
 
