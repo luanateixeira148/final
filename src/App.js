@@ -1,12 +1,12 @@
 import './App.scss';
 
-import Login from './pages/Login';
+import Welcome from './pages/Welcome';
 
 
 function App() {
   return (
     <div className="App">
-      <Login />
+      <Welcome />
     </div>
   );
 }
