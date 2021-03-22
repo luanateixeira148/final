@@ -1,3 +1,22 @@
 .App {
   text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items:center;
+  padding-top: 50px;
+  // background-color: darkgray;
+}
+
+.ScrollDiv{
+  // background-color:pink;
+  width:100%;
+  height:666px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  overflow-y: scroll;
+}
+
+.ScrollDiv::-webkit-scrollbar {
+  display: none;
 }

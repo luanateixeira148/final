@@ -83,7 +83,7 @@ width:280px;
 color:grey;
 `;
 
-const CommentBox = styled.div `
+const DescriptionBox = styled.div `
 // background-color:green;
 height:43px;
 width:280px;
@@ -110,7 +110,7 @@ justify-content:flex-start;
 cursor:pointer;
 `;
 
-    const Card = ({Title, Username, Number, Comment}) =>{
+    const Card = ({Title, Username, Number, Description}) =>{
     return  <Container>
                 <ImageBox></ImageBox>
                 <TitleDiv>
@@ -119,7 +119,7 @@ cursor:pointer;
                     <CommentNumber>{Number}</CommentNumber>
                 </TitleDiv>
                 <UsernameTitle>by {Username}</UsernameTitle>
-                <CommentBox>{Comment}</CommentBox>
+                <DescriptionBox>{Description}</DescriptionBox>
                 <SeeMore>See More</SeeMore>
             </Container>   
     }
@@ -128,7 +128,7 @@ cursor:pointer;
         Title:"Default Title",
         Username:"Default Username",
         Number:99,
-        Comment:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus facilisis non ipsum a accumsan. Vivamus id hendrerit lorem, nec viverra leo. Nam nibh sapien, volutpat vitae mollis sed, tempus eu arcu."
+        Description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus facilisis non ipsum a accumsan. Vivamus id hendrerit lorem, nec viverra leo. Nam nibh sapien, volutpat vitae mollis sed, tempus eu arcu."
     }
 
 export default Card;
