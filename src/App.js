@@ -7,12 +7,13 @@ import PostNav from './comps/PostNav';
 
 
 import Post from './pages/Post';
+import Main from './pages/Main';
 
 
 function App() {
   return (
     <div className="App">
-      <LoginSignup />
+      <Main />
     </div>
   );
 }
