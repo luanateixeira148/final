@@ -2,6 +2,7 @@ import React from 'react';
 import "./signup.scss";
 
 import LoginCard from '../../comps/LoginCard';
+import LoginSignup from '../../comps/LoginSignup';
 
 const Signup = () => {
 
@@ -11,7 +12,7 @@ const Signup = () => {
         </div>
     
         <div className="footer">
-        
+        <LoginSignup text="Already a member?" text2="Login"/>
         </div>
     </div>
     }
