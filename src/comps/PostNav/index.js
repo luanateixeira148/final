@@ -14,6 +14,7 @@ align-items:center;
 const PlusIcon = styled.div`
 width:50px;
 height:50px;
+cursor:pointer;
 `;
 
 const PostNav = ({ onClick }) => {
