@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import logout from './logout.svg';
- 
+import {Link} from 'react-router-dom';
 
 const Container = styled.div`
     width: 375px;
@@ -37,9 +37,11 @@ const HeaderLogout = ({text, onClick}) => {
     return <Container>
         <Extra></Extra>
         <Text>{text}</Text>
+        <Link to="/Login">
         <Button onClick={onClick}>
         <img src={logout}></img>
         </Button>
+        </Link>
     
     </Container>
 }

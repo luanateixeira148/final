@@ -1,6 +1,5 @@
 import React from 'react';
 import "./login.scss";
-
 import WelcomeCard from '../../comps/WelcomeCard';
 
 const Welcome = () => {

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+// import { Link } from '@material-ui/core';
+import {Link} from 'react-router-dom';
 
 const CommentContainer = styled.div`
 width:375px;
@@ -22,16 +24,20 @@ color:#DE5571;
 cursor:pointer;
 `;
 
-const LoginSignup = ({ text, text2 }) => {
-    return <CommentContainer>
-        <Info>{text}</Info>
-        <Sign>{text2}</Sign>
-    </CommentContainer>
+const LoginRedirect = ({ text, text2 }) => {
+    return  <withRouter>
+    
+                <CommentContainer>
+                    <Info>{text}</Info>
+                    <Link to="/Login"><Sign>{text2}</Sign></Link>
+                </CommentContainer>
+
+            </withRouter>
 }
 
-LoginSignup.defaultProps = {
+LoginRedirect.defaultProps = {
     text: "Not a member yet?",
     text2: "Sign Up",
 }
 
-export default LoginSignup;
+export default LoginRedirect;

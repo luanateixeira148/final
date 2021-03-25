@@ -1,11 +1,12 @@
 import React from "react";
 import styled from 'styled-components'
 import Bubble from '../../bubble.png'
+import {Link} from 'react-router-dom';
 
 const Container = styled.div `
 background-color:white;
 width:320px;
-height:456px;
+min-height:456px;
 border-radius:6px;
 // justify-content:center;
 align-items:center;
@@ -13,6 +14,7 @@ display:flex;
 // padding:20px;
 flex-direction:column;
 position:relative;
+margin:10px;
 `;
 
 const ImageBox = styled.div `
@@ -104,6 +106,7 @@ width:280px;
 height:20px;
 font-weight:bold;
 bottom:20px;
+left:20px;
 position:absolute;
 display:flex;
 justify-content:flex-start;
@@ -120,7 +123,9 @@ cursor:pointer;
                 </TitleDiv>
                 <UsernameTitle>by {Username}</UsernameTitle>
                 <DescriptionBox>{Description}</DescriptionBox>
+                <Link to="/Comment">
                 <SeeMore>See More</SeeMore>
+                </Link> 
             </Container>   
     }
 

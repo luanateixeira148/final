@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Button from '../Button'
 import Input from '../Input';
 import LoginHeader from '../LoginHeader';
+import {Link} from 'react-router-dom';
 
 const LoginCardContainer = styled.div`
     min-width: 330px;
@@ -21,7 +22,7 @@ const LoginCard = ({buttontext, headertext}) => {
       <LoginHeader text={headertext}/>
       <Input label="Username" />
       <Input label="Password" />
-      <Button text={buttontext}/>
+      <Link to="/Welcome"><Button text={buttontext}/></Link> 
   </LoginCardContainer>
 }
 
