@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Plus from './NavPlus.svg';
+import {Link} from 'react-router-dom';
 
 const Container = styled.div`
 width:375px;
@@ -18,11 +19,13 @@ cursor:pointer;
 `;
 
 const PostNav = ({ onClick }) => {
-    return <Container>
-        <PlusIcon onClick={onClick}>
-            <img src={Plus} />
-        </PlusIcon>
-    </Container>
+    return  <Container>
+                <Link to="/Post">
+                    <PlusIcon onClick={onClick}>
+                        <img src={Plus} />
+                    </PlusIcon>
+                </Link>
+            </Container>
 }
 
 PostNav.defaultProps = {

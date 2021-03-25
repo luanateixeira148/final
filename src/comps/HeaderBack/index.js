@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import back from './back2.svg';
- 
+import {withRouter} from 'react-router';
+// import { Link } from '@material-ui/core';
+import {Link} from 'react-router-dom';
 
 const Container = styled.div`
     width: 375px;
@@ -11,6 +13,7 @@ const Container = styled.div`
     align-items: center;
     // display: flex;
     // justify-content: space-around;
+    position:relative;
     
 `;
 
@@ -38,9 +41,11 @@ top: 18px;
 
 const HeaderBack = ({text, onClick}) => {
     return <Container>
+        <Link to="/Main">
         <Button onClick={onClick}>
         <img src={back}></img>
         </Button>
+        </Link>
         <Text>{text}</Text>
         <Extra></Extra>
         

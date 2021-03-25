@@ -1,8 +1,8 @@
 import React from 'react';
 import "./signup.scss";
-
 import LoginCard from '../../comps/LoginCard';
-import LoginSignup from '../../comps/LoginSignup';
+import LoginRedirect from '../../comps/LoginRedirect';
+import {Link} from 'react-router-dom';
 
 const Signup = () => {
 
@@ -12,7 +12,9 @@ const Signup = () => {
         </div>
     
         <div className="footer">
-        <LoginSignup text="Already a member?" text2="Login"/>
+       
+        <LoginRedirect text="Already a member?" text2="Login"/>
+    
         </div>
     </div>
     }

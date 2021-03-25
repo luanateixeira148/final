@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import Back from '../../back.png'
+import {Link} from 'react-router-dom';
 
 const Container = styled.div `
 background-color:#F9F9F9;
@@ -30,6 +31,7 @@ width:25px;
 height:25px;
 position:absolute;
 left:20px;
+top:20px;
 `;
 
 const Image = styled.div `
@@ -133,7 +135,9 @@ bottom:0px
 const Comment = ({HeaderTitle, Title, Username, Description, Comments, Commentor}) =>{
     return  <Container>
                     <Header>
+                        <Link to="/Main">
                         <BackButton img src={Back} alt="Back Icon"/>
+                        </Link>
                         {HeaderTitle}
                     </Header>
 

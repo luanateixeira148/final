@@ -1,7 +1,9 @@
+// import { Link } from '@material-ui/core';
 import React, {useState} from 'react';
 import styled from 'styled-components';
 import Button from '../Button'
 import LoginHeader from '../LoginHeader';
+import {Link} from 'react-router-dom';
 
 const LoginCardContainer = styled.div`
     min-width: 330px;
@@ -27,12 +29,12 @@ const Intro = styled.div`
 `;
 
 const WelcomeCard = ({buttontext, headertext}) => {
-  return <LoginCardContainer>
-      <LoginHeader text={headertext}/>
-      <Intro>We created this app for UI/UX designers like you! <br/>
-Here, you will be able to share your designs, get feedback from other designers from all around the globe, and find inspirations for your next project.</Intro> 
-      <Button text={buttontext} width="500px"/>
-  </LoginCardContainer>
+  return    <LoginCardContainer>
+                <LoginHeader text={headertext}/>
+                <Intro>We created this app for UI/UX designers like you! <br/>
+            Here, you will be able to share your designs, get feedback from other designers from all around the globe, and find inspirations for your next project.</Intro> 
+                <Link to="/Main"><Button text={buttontext} width="500px"/></Link>
+            </LoginCardContainer>
 }
 
 WelcomeCard.defaultProps = {

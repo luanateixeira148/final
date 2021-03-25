@@ -1,0 +1,39 @@
+.mainpage {
+    background-color: #F9F9F9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width:375px;
+    height:812px;
+}
+
+.header{
+    position: absolute;
+    top: 0px;
+}
+
+.postnav {
+    // background-color: rgb(255, 0, 242);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+}
+
+.CardScrollDiv{
+    // background-color:pink;
+    width:100%;
+    height:666px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    overflow-y: scroll;
+  }
+  
+  .CardScrollDiv::-webkit-scrollbar {
+    display: none;
+  }
