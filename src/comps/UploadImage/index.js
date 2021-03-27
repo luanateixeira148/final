@@ -10,7 +10,7 @@ const Container = styled.div`
     align-items: center;
 `;
 
-const Button = styled.div`
+const Button = styled.input`
     margin-top: 20%;
 `;
 
@@ -33,13 +33,11 @@ const Text = styled.div`
 
 const UploadImage = ({onClick}) => {
     return <Container>
-        <Button onClick={onClick}>
-        <img src={Plus}/>
-        </Button>
-
+        <Button onClick={onClick} type="file"></Button>
         <Header>Click here to upload your design</Header>
         <Text>Jpeg, svg or png files are accepted</Text>
     </Container>
+    
 }
 
 UploadImage.defaultProps = {

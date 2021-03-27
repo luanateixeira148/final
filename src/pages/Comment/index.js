@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 import Back from '../../back.png'
 import {Link} from 'react-router-dom';
+import CommentPost from '../../comps/CommentPost'; 
+import SurfingApp2 from './surfingapp2.png';
+
 
 const Container = styled.div `
 background-color:#F9F9F9;
@@ -132,7 +135,7 @@ bottom:0px
 `;
 
 
-const Comment = ({HeaderTitle, Title, Username, Description, Comments, Commentor}) =>{
+const Comment = ({HeaderTitle, Title, Username, Description, Comments, Commentor, Comments2, Commentor2, Comments3, Commentor3}) =>{
     return  <Container>
                     <Header>
                         <Link to="/Main">
@@ -142,7 +145,7 @@ const Comment = ({HeaderTitle, Title, Username, Description, Comments, Commentor
                     </Header>
 
                     <div className="ScrollDiv">
-                    <Image></Image>
+                    <Image><img src={SurfingApp2}></img></Image>
 
                     <TitleDiv>
                         <TitleText>{Title}</TitleText>
@@ -152,7 +155,6 @@ const Comment = ({HeaderTitle, Title, Username, Description, Comments, Commentor
 
                     <DescriptionBox>{Description}</DescriptionBox>
 
-                    <CommentTitle>Comments</CommentTitle>
 
                     <CommentText>
                         <CommentorName>{Commentor}</CommentorName>
@@ -160,33 +162,32 @@ const Comment = ({HeaderTitle, Title, Username, Description, Comments, Commentor
                     </CommentText>
 
                     <CommentText>
-                        <CommentorName>{Commentor}</CommentorName>
-                        {Comments}
+                        <CommentorName>{Commentor2}</CommentorName>
+                        {Comments2}
                     </CommentText>
 
                     <CommentText>
-                        <CommentorName>{Commentor}</CommentorName>
-                        {Comments}
-                    </CommentText>
-
-                    <CommentText>
-                        <CommentorName>{Commentor}</CommentorName>
-                        {Comments}
+                        <CommentorName>{Commentor3}</CommentorName>
+                        {Comments3}
                     </CommentText>
 
                 </div>
-                <Footer />
+                <CommentPost />
             </Container>
 }
 
 Comment.defaultProps = {
-    HeaderTitle:"Default Title",
-    Title:"Default Title",
-    Username:"Default Username",
-    Number:99,
-    Description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus facilisis non ipsum a accumsan. Vivamus id hendrerit lorem, nec viverra leo. Nam nibh sapien, volutpat vitae mollis sed, tempus eu arcu.",
-    Comments:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus facilisis non ipsum a accumsan. Vivamus id hendrerit lorem, nec viverra leo. Nam nibh sapien, volutpat vitae mollis sed, tempus eu arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus facilisis non ipsum a accumsan. Vivamus id hendrerit lorem, nec viverra leo. Nam nibh sapien, volutpat vitae mollis sed, tempus eu arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus facilisis non ipsum a accumsan. Vivamus id hendrerit lorem, nec viverra leo. Nam nibh sapien, volutpat vitae mollis sed, tempus eu arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit.320px",
-    Commentor:"Default Name"
+    HeaderTitle:"Surfing app redesign",
+    Title:"Suring app redesign",
+    Username:"Emma Parsons",
+    Number:3,
+    Description:"I redesigned this surfing app for my school project! Any feedback would be appreciated!",
+    Comments:"The UI design looks beautiful! One thing I noticed is the button in the home page is hard to see. Change the color to brighter color.",
+    Commentor:"Henry Leung",
+    Comments2:"Great app idea! As a surfing fan, I would definitly use this app",
+    Commentor2:"Ramin Shadmehr",
+    Comments3:"I would use color blue instead of purple because blue matches with surfing.",
+    Commentor3:"Wim Tueling"
 }
 
 export default Comment;
