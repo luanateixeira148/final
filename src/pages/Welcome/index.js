@@ -6,7 +6,7 @@ const Welcome = () => {
 
     return <div className="main">
         <div className="card">
-         <WelcomeCard headertext="Welcome" buttontext="Start discoverying"/>
+         <WelcomeCard headertext="Welcome" buttontext="Start discovering"/>
         </div>
     
         <div className="footer">
