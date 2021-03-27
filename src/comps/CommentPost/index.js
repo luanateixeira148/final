@@ -22,18 +22,19 @@ font-size:18px;
 
 const Post = styled.button`
 width:70px;
-height:49px;
+height:50px;
 color:#3D88AF;
 background-color:white;
 border: 1px solid #ccc;
 border-radius:0 6px 6px 0;
 font-size:18px;
 cursor:pointer;
+font-weight:bold;
 `;
 
 const CommentPost = ({}) => {
     return <CommentContainer>
-        <Comment type="text" placeholder="Excellent work" />
+        <Comment type="text" placeholder="Leave a comment..." />
         <Post type="button">Post</Post>
     </CommentContainer>
 }

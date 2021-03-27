@@ -3,6 +3,12 @@ import styled from 'styled-components'
 import Bubble from '../../bubble.png'
 import {Link} from 'react-router-dom';
 
+import SurfingApp from './surfingapp.png';
+import FitnessApp from './fitnessapp.jpeg';
+import RestaurantApp from './restaurantapp.jpeg';
+import DatingApp from './datingapp.jpeg';
+
+
 const Container = styled.div `
 background-color:white;
 width:320px;
@@ -24,6 +30,7 @@ height:280px;
 border-radius:6px;
 margin:20px;
 margin-bottom:0px;
+object-fit:fill;
 `;
 
 const TitleDiv = styled.div `
@@ -113,9 +120,11 @@ justify-content:flex-start;
 cursor:pointer;
 `;
 
-    const Card = ({Title, Username, Number, Description}) =>{
+
+
+    const Card = ({Title, Username, Number, Description, Image}) =>{
     return  <Container>
-                <ImageBox></ImageBox>
+                <ImageBox><img src={Image}/></ImageBox>
                 <TitleDiv>
                     <TitleText>{Title}</TitleText>
                     <CommentBubble><img src={Bubble} alt="Bubble Icon" /></CommentBubble>
@@ -133,7 +142,8 @@ cursor:pointer;
         Title:"Default Title",
         Username:"Default Username",
         Number:99,
-        Description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus facilisis non ipsum a accumsan. Vivamus id hendrerit lorem, nec viverra leo. Nam nibh sapien, volutpat vitae mollis sed, tempus eu arcu."
+        Description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus facilisis non ipsum a accumsan. Vivamus id hendrerit lorem, nec viverra leo. Nam nibh sapien, volutpat vitae mollis sed, tempus eu arcu.",
+        Image: SurfingApp,
     }
 
 export default Card;
